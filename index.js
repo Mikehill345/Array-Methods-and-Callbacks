@@ -14,11 +14,11 @@ import { fifaData } from './fifa.js';
 const worldCup = fifaData.filter(function(item, i){
         return item.Year === 2014 && item.Stage === "Final"
 })
-// console.log(worldCup[0]["Home Team Name"]);
-// console.log(worldCup[0]["Away Team Name"]);
-// console.log(worldCup[0]["Home Team Goals"]);
-// console.log(worldCup[0]["Away Team Goals"]);
-// console.log(worldCup[0]["Win conditions"]);
+console.log(worldCup[0]["Home Team Name"]);
+console.log(worldCup[0]["Away Team Name"]);
+console.log(worldCup[0]["Home Team Goals"]);
+console.log(worldCup[0]["Away Team Goals"]);
+console.log(worldCup[0]["Win conditions"]);
 
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
@@ -66,12 +66,10 @@ Parameters:
 
 function getWinnersByYear(cb1, cb2) {
 for (let i = 0; i < cb1.length; i++) {
-    console.log(cb1()[i]);
-    // let c = `In ${cb1[i]}, ${cb2[i]} won the world cup!`  
+    console.log( `In ${cb1[i]}, ${cb2[i]} won the world cup!`)  
 }
-
 };
-getWinnersByYear((getYears(fifaData),getWinners(fifaData)));
+getWinnersByYear(getYears(getFinals(fifaData)),getWinners(getFinals(fifaData)));
 // console.log(getWinnersByYear(getYears(fifaData),getWinners(fifaData)));
 
 /* Task 6: Write a function called `getAverageGoals` that accepts a parameter `data` and returns the the average number of home team goals and
